@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Online</title>
+  <style>
+    th, td { border: 1px solid #999; padding: 6px 10px; text-align: left; }
+    table { border-collapse: collapse; width: 50%; margin-top: 12px; }
+    label { display: inline-block; width: 100px; }
+  </style>
+</head>
+<body>
+  <h1>Toko Online</h1>
+  <p id="pesan"></p>
+
+  <h2>Beli</h2>
+    <select id="pilihProduk"></select>
+    <input type="number" id="jumlah" min="1" placeholder="Jumlah (default 1)">
+    <button type="button" id="btnBeli">Beli</button>
+  
+  <h2>Kelola Produk</h2>
+  <form id="formProduk">
+    <div>
+      <label for="kode">Kode Produk</label>
+      <input type="text" id="kode" required>
+    </div>
+    <div>
+      <label for="nama">Nama Produk</label>
+      <input type="text" id="nama" required>
+    </div>
+    <div>
+      <label for="harga">Harga</label>
+      <input type="number" id="harga" min="0" required>
+    </div>
+    <div>
+      <label for="stok">Stok</label>
+      <input type="number" id="stok" min="0" required>
+    </div>
+    <button type="submit" id="btnSimpan">Simpan</button>
+    <button type="button" id="btnBatal">Batal</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Kode Produk</th>
+        <th>Nama Produk</th>
+        <th>Harga</th>
+        <th>Stok</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="dataProduk"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
